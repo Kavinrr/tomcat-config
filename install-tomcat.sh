@@ -1,6 +1,6 @@
 #!/bin/bash
 ver=`curl --silent http://mirror.vorboss.net/apache/tomcat/tomcat-9/ | grep v9 | awk '{split($5,c,">v") ; split(c[2],d,"/") ; print d[1]}'`
-sudo yum install -y java wget git
+sudo apt install -y java wget git
 cd /opt
 rm -rf apache*
 sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.tar.gz
